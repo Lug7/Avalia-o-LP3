@@ -1,0 +1,87 @@
+@{
+    ViewData["Title"] = "Cadastro";
+}
+
+<div class="container">
+    <h1 class="display-4">Cadastrar seu estabelecimento</h1>
+    <br>
+    <form action="/Home/Cadastrar" method="post">
+        <div class="form-group row">
+            <label for="id" class="col-sm-2 col-form-label">Id</label>
+            <div class="col-sm-10">
+            <input type="number" class="form-control" name="id" id="id" placeholder="Id" required>
+            </div>
+        </div>
+        <br>
+        <div class="form-group row">
+            <label for="nome" class="col-sm-2 col-form-label">Nome</label>
+            <div class="col-sm-10">
+            <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome" required>
+            </div>
+        </div>
+        <br>
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+            </div>
+        </div>
+        <br>
+        <fieldset class="form-group">
+            <div class="row">
+            <legend class="col-form-label col-sm-2 pt-0">Piso</legend>
+            <div class="col-sm-10">
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="piso" id="piso1" value="1" checked>
+                <label class="form-check-label" for="piso1">
+                    Piso 1
+                </label>
+                </div>
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="piso" id="piso2" value="2">
+                <label class="form-check-label" for="piso2">
+                    Piso 2
+                </label>
+                </div>
+                <div class="form-check disabled">
+                <input class="form-check-input" type="radio" name="piso" id="piso3" value="3">
+                <label class="form-check-label" for="piso3">
+                    Piso 3
+                </label>
+                </div>
+            </div>
+            </div>
+        </fieldset>
+        <br>
+        <fieldset class="form-group">
+            <div class="row">
+            <legend class="col-form-label col-sm-2 pt-0">Tipo de estabelecimento</legend>
+            <div class="col-sm-10">
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="tipo" id="loja" value="true" checked>
+                <label class="form-check-label" for="loja">
+                    Loja
+                </label>
+                </div>
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="tipo" id="kiosque" value="false">
+                <label class="form-check-label" for="kiosque">
+                    Kiosque
+                </label>
+                </div>
+            </div>
+            </div>
+        </fieldset>
+        <br>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Descrição</label>
+            <textarea class="form-control" name="descricao" id="descricao" rows="3"></textarea>
+        </div>
+        <br>
+        <div class="form-group row">
+            <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,47 @@
+@{
+    ViewData["Title"] = "Gerenciamento";
+}
+
+@using System.Linq
+
+<div class="text-center" style="max-width: 800px; justify-content: center">
+    <h1 class="display-4">Lojas cadastradas (ADMIN)</h1>
+
+    @* @if(!ViewBag.estabelecimentos.Any())
+    {
+        <h2>Nenhum estabelecimento cadastrado</h2>
+    }
+    else
+    { *@
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Piso</th>
+                    <th scope="col">Nome</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var estabelecimento in ViewBag.estabelecimentos) 
+                {
+                    <tr>
+                        <th scope="row">@estabelecimento.Id</th>
+                        <td>piso @estabelecimento.Piso</td>
+                        <td>@estabelecimento.Nome</td>
+                        <td>
+                            <form action="/Home/Remover" method="post">
+                                <button type="submit" class="btn btn-primary" name="id" value=@estabelecimento.Id>Remover</button>
+                            </form>
+                        </td>
+                        <td>
+                            <form action="/Home/Detalhes" method="post">
+                                <button type="submit" class="btn btn-primary" name="id" value=@estabelecimento.Id>Detalhes</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    @* } *@
+    
+</div>

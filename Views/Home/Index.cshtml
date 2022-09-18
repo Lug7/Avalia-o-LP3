@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Shopping";
+}
+
+@using System.Linq;
+
+<div class="text-center" style="max-width: 800px; justify-content: center">
+    <h1 class="display-4">Lojas cadastradas</h1>
+
+    @* @if(!ViewBag.estabelecimentos.Any())
+    {
+        <h2>Nenhum estabelecimento cadastrado</h2>
+    }
+    else
+    { *@
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Piso</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var estabelecimento in ViewBag.estabelecimentos) 
+                {
+                    <tr>
+                        <td>piso @estabelecimento.Piso</td>
+                        <td>@estabelecimento.Nome</td>
+                        <td>@estabelecimento.Descricao</td>
+                        <td>@estabelecimento.Email</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    @* } *@
+    
+</div>
